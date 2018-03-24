@@ -1,0 +1,52 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.row {
+  flex: 1;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+ 
+	.main-header,
+	.nav-bar,
+	.main-nav {
+		display: flex;
+	}
+
+	.main-header,
+	.nav-bar {
+		align-items: center;
+	}
+
+	.col {
+		flex: 1 50%;
+	}
+
+	.row {
+		flex-wrap: wrap;
+	}
+}
+
+@media (min-width: 1025px) {
+
+	.main-header,
+	.nav-bar {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.col {
+		flex-basis: 0;
+	}
+}

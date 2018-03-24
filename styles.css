@@ -1,0 +1,175 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+/* Color pallette:
+
+  dark-teal:    #2b616d;
+  arctic:       #b2dbd5;
+  white-cloud:  #ffffff;
+  brick:        #fa8d62;
+
+*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	background: #ffffff;
+	color:#2b616d;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.25;
+  margin: 0;
+}
+
+a {
+  color: #fa8d62;
+  text-decoration: none;
+}
+
+a:hover {
+	color: #b2dbd5;
+}
+
+header, hr {
+	background-color:#b2dbd5;
+}
+
+hr {
+  border: none;
+  margin: 4px auto;
+}
+
+h1 {
+	font-size: 1.2em;
+	margin: 0 auto;
+}
+
+h2,
+h3,
+a {
+  color: #fa8d62;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+img:active {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  transition: all 0s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  font-size: .95em;
+  margin-bottom: 1.8em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.logo {
+  width: 150px;
+}
+
+.main-nav {
+  margin: 5px;
+}
+
+.logo a, .main-nav a {
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  padding: 10px 15px;
+  font-size: .95em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  color: #2b616d;
+}
+
+/* ---- Layout Containers ---- */
+
+h1, footer,
+.headline {
+	text-align: center;
+}
+
+p.headline, footer {
+	color: #2b616d;
+	font-size: .9em;
+}
+
+.petField {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.top {
+	height: 4px;
+}
+
+.bottom {
+	height: 2px;
+}
+
+.footer {
+  background-color: #b2dbd5;
+  height: 80px;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.row {
+  padding-top: 25px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+  .nav-bar,
+  .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .main-header img {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .nav-bar,
+  .row {
+    width: 80%;
+    max-width: 1150px;
+  }
+
+}
