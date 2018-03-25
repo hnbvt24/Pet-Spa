@@ -8,6 +8,10 @@
 	min-height: 100vh;
 }
 
+.wrap {
+	min-height: calc(100vh - 80px);
+}
+
 .row {
   flex: 1;
 }

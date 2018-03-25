@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Doggy Daycare</title>
+	<title>Doggy Daycare / Contact</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="normalize.css" />
@@ -28,12 +28,37 @@
 			</header>  
 			
 			<div class="row">
-				<h2 class="headline">Select the type of pet that needs sitting:</h2>
-				<div class="petField">
-					<a href="reserve-a-pet.html" class="col"><img src="images/cat.png" alt="Cat"/></a>
-					<a href="reserve-a-pet.html" class="col"><img src="images/corgi.png" alt="Dog"/></a>
-					<a href="reserve-a-pet.html" class="col"><img src="images/bunny.png" alt="Other"/></a>
-				</div>
+				<form action="message-sent.html" method="post">
+
+		    		<fieldset>
+		    			<h2 class="headline">Have a Question? Send Us a Message</h2>
+			    		<p class="headline">Please fill out the form below and we'll get back to you as soon as we can.</p>
+		    		</fieldset>
+		    		<fieldset class="topField">
+		    			<div class="flex-wrapper">
+			    			<div>
+				    			<label for="name">Full Name</label>
+				    			<input type="text" id="name" name="user_name" placeholder="Required ">
+				    		</div>
+				    		<div>
+				    			<label for="mail">Email Address</label>
+				    			<input type="email" id="mail" name="user_email" placeholder="Required ">
+				    		</div>
+				    		<div>
+				    			<label for="phone">Phone Number</label>
+				    			<input type="tel" id="phone" name="user_phone" placeholder="(555) 555-1234">
+				    		</div>
+				    		<div>
+				    			<label for="message">Question or Comment</label>
+				    			<textarea id="message" name="message"></textarea>
+				    		</div>
+				    	</div>
+		    		</fieldset>
+		    		<hr class="bottom">
+		    		
+		    		<button type="submit">Sign Up</button>
+
+		    	</form>
 			</div>
 
 		</div>
