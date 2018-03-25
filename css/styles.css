@@ -220,6 +220,21 @@ button:active {
   background: #4091A3;
 }
 
+input.visited.dirty:valid {
+ border-bottom: 1px solid $color-success;
+}
+
+form.submitted input:invalid {
+ border-bottom: 1px solid $color-error;
+}
+
+input:valid {
+ border-bottom: 1px solid $color-success;
+}
+input:invalid {
+ border-bottom: 1px solid $color-error;
+}
+
 /* ================================= 
   Base Layout Styles
 ==================================== */
@@ -269,7 +284,8 @@ p.headline, footer {
 
 .petField {
   margin: 0 auto;
-  width: 90%;
+  text-align: center;
+  width: 100%;
 }
 
 .top {

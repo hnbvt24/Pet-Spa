@@ -4,9 +4,9 @@
 	<title>Doggy Daycare / Reserve A Pet</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="normalize.css" />
-	<link rel="stylesheet" type="text/css" href="styles.css" />
-	<link rel="stylesheet" type="text/css" href="flexbox.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/flexbox.css" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
@@ -28,10 +28,10 @@
 			</header>  
 			
 			<div class="row">
-				<form action="reservation-booked.html" method="post">
+				<form id="myForm" action="reservation-booked.html" method="post">
 
 		    		<fieldset>
-		    			<h2 class="headline">Make a Reservation for your Pet</h2>
+		    			<h2 id ="headline" class="headline"></h2>
 			    		<p class="headline">Get the care you need for your pet. <br />Please be sure to fill out all required fields.</p>
 		    		</fieldset>
 
@@ -41,10 +41,10 @@
 		    		<fieldset class="topField">
 		    			<legend class="input">Pet Information</legend>
 		    			<div class="flex-wrapper">
-		    				<div>
+		    				<div class="petSel">
 				    			<label for="petType">Type of Pet</label>
 				    			<select id="petType" name="pet_type">
-				    			 	<option value="" selected hidden disabled>Select Pet Type</option>
+				    			 	<option value="">Select Pet Type</option>
 				    			 	<option value="cat">Cat</option>
 				    			 	<option value="dog">Dog</option>
 				    			 	<option value="other">Other</option>
@@ -56,15 +56,15 @@
 				    		</div>
 			    			<div>
 				    			<label for="petName">Name</label>
-				    			<input type="text" id="petName" name="pet_name" placeholder="Required">
+				    			<input type="text" id="petName" name="pet_name" placeholder="Required" required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
 				    			<label for="petAge">Age</label>
-				    			<input type="text" id="petAge" name="pet_age" placeholder="Required">
+				    			<input type="text" id="petAge" name="pet_age" placeholder="Required" required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
 				    			<label for="petWeight">Weight</label>
-				    			<input type="text" id="petWeight" name="pet_weight" placeholder="Required">
+				    			<input type="text" id="petWeight" name="pet_weight" placeholder="Required" required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
 				    			<label for="petAllergies">Allergies</label>
@@ -77,23 +77,23 @@
 		    			<div class="flex-wrapper">
 			    			<div>
 				    			<label for="name">Full Name</label>
-				    			<input type="text" id="name" name="user_name" placeholder="Required ">
+				    			<input type="text" id="name" name="user_name" placeholder="Required " required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
-				    			<label for="mail">Email Address</label>
-				    			<input type="email" id="mail" name="user_email" placeholder="Required ">
+				    			<label for="email">Email Address</label>
+				    			<input type="email" id="email" name="user_email" placeholder="Required " required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
 				    			<label for="phone">Phone Number</label>
-				    			<input type="tel" id="phone" name="user_phone" placeholder="(555) 555-1234">
+				    			<input type="tel" id="phone" name="user_phone" placeholder="(555) 555-1234" required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
 				    			<label for="address">Street Address</label>
-				    			<input type="text" id="address" name="user_address" placeholder="123 Main St.">
+				    			<input type="text" id="address" name="user_address" placeholder="123 Main St." required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
 				    			<label for="city">City</label>
-				    			<input type="text" id="city" name="user_city" placeholder="New York">
+				    			<input type="text" id="city" name="user_city" placeholder="New York" required data-value-missing="Translate('Required')"/>
 				    		</div>
 				    		<div>
 				    			<label for="state">State</label>
@@ -154,8 +154,7 @@
 							</div>
 							<div>
 				    			<label for="zip">Zip Code</label>
-				    			<input type="text" id="zip" name="user_zip" placeholder="00000">
-				    		</div>
+				    			<input type="text" id="zip" name="user_zip" placeholder="00000" required data-value-missing="Translate('Required')"/>
 				    	</div>
 		    		</fieldset>
 		    		<hr class="bottom">
@@ -164,7 +163,7 @@
 		    			<p>Select the date you wish to have booked with us</p>
 		    		</fieldset>
 
-		    		<button type="submit">Sign Up</button>
+		    		<button type="Submit">Sign Up</button>
 
 		    	</form>
 			</div>
@@ -172,18 +171,33 @@
 		</div>
 
 		<footer class="footer">
-			<span id="copyright"></span>
+			<div id="copyright"></div>
     	</footer>
 
     </div>
 
 	<script language="javascript" type="text/javascript">
-	// Gets the discount countdown date
-	var today = new Date();
-	var year = today.getFullYear();
-	var copyright = document.getElementById('copyright');
-	copyright.innerHTML = '&copy; ' + year + ' Pet Spa &amp; Care';
+		// Gets the copyright year
+		var today = new Date();
+		var year = today.getFullYear();
+		var copyright = document.getElementById('copyright');
+		copyright.innerHTML = '&copy; ' + year + ' Pet Spa &amp; Care';
 	</script>
-
+	<script language="javascript" type="text/javascript">
+		var url = window.location + '';
+		var urlAux = url.split('=');
+		var img_id = urlAux[1];
+		// Make a Reservation for your + Pet Type
+		if (img_id === 'Other') {
+			$('#headline').text('Make a Reservation for your Pet');
+		} else {
+			$('#headline').text('Make a Reservation for your ' + img_id);
+		}
+		// Convert to lowercase
+		img_id = img_id.toLowerCase();
+		// Select Pet Type Value in Dropdown
+		$("#petType").val(img_id);
+	</script>
+	<script src="js/val.js"></script>
 </body>
 </html>
