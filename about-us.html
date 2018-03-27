@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Doggy Daycare / About Us</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/flexbox.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="wrap">
+
+			<header class="main-header">
+				<div class="nav-bar">
+					<div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"/></a></div>
+					<ul class="main-nav">
+						<li><a href="about-us.html">About Us</a></li>
+						<li><a href="reserve-a-pet.html">Reserve A Pet</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</header>  
+			
+			<div class="row">
+				<h2 class="headline">Who we are as Pet Spa & Care</h2>
+			</div>
+
+		</div>
+
+		<footer class="footer">
+			<span id="copyright"></span>
+    	</footer>
+
+    </div>
+		
+	<script language="javascript" type="text/javascript">
+	// Gets the discount countdown date
+	var today = new Date();
+	var year = today.getFullYear();
+	var copyright = document.getElementById('copyright');
+	copyright.innerHTML = '&copy; ' + year + ' Pet Spa &amp; Care';
+	</script>
+	<script language="javascript" type="text/javascript">
+		$(".col").click(function(){
+			//this will find the alt tage from the selected image
+	   		var petval = this.alt;
+	       //this will redirect us in same window to the form with the selected animal
+	       	document.location.href = "reserve-a-pet.html?petval=" + petval;
+	       	$('.col').load('reserve-a-pet.html #' + petval);
+	    });
+	</script>
+
+</body>
+</html>
