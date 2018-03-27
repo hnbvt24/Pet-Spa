@@ -136,7 +136,6 @@ select {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  height: 52px;
   margin: 0;
   outline: 0;
   padding: 18px;
@@ -305,6 +304,13 @@ p.headline, footer {
 
 .row {
   padding-top: 25px;
+  background: #fff;
+  width: 100%;
+  min-height: calc(100vh - 190.656px);
+}
+
+.bottomField {
+	margin-bottom: 25px;
 }
 
 /* ================================= 
