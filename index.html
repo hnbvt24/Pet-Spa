@@ -56,7 +56,7 @@
 	   		var petval = this.alt;
 	       //this will redirect us in same window to the form with the selected animal
 	       	document.location.href = "reserve-a-pet.html?petval=" + petval;
-	       	$('.col').load('reserve-a-pet.html #' + petval);
+	       	$('.col').load('reserve-a-pet.html?pet=' + petval);
 	    });
 	</script>
 
