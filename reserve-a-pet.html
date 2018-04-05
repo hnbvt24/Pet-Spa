@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Doggy Daycare / Reserve A Pet</title>
+	<title>Pet Spa &amp; Care / Reserve A Pet</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="stylesheet" type="text/css" href="css/flexbox.css" />
+	<link rel='icon' href='images/favicon.ico' type='image/favicon'/ >
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
@@ -188,7 +189,7 @@
 		var urlAux = url.split('=');
 		var img_id = urlAux[1];
 		// Make a Reservation for your + Pet Type
-		if (img_id === 'Other') {
+		if ((img_id === 'Other') || (!img_id)) {
 			$('#headline').text('Make a Reservation for your Pet');
 		} else {
 			$('#headline').text('Make a Reservation for your ' + img_id);
